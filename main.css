@@ -110,6 +110,7 @@ body {
   color: #fff;
 }
 .table__list {
+  padding: 20px 0;
   width: 90%;
 }
 .table__list-item {
