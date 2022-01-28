@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home budget</title>
+  <link rel="stylesheet" type="text/css" href="./main.css">
+  <script src="https://kit.fontawesome.com/9378716ea5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <main class="content-wrapper">
+
+    <header class="header">
+      <h1 class="header__logo">Home budget.</h1>
+      <h2 class="header__info-bar">
+        <span id="summaryElement" class="header__info-bar-animation">#Check Wallet Balance</span>
+      </h2>
+    </header>
+
+    <section class="tables">
+      <div class="table">
+        <h3 class="table__heading">Incomes</h3>
+        <form class="table__form">
+          <input name="name" type="text" class="table__form-input table__form-input--name" placeholder="Income" />
+          <input id="amountIncomes" name="amount" type="number" min="0" class="table__form-input table__form-input--amount" placeholder="Amount" />
+          <input type="submit" class="table__form-input table__form-input--submit" value="Add" />
+        </form>
+        <ol id="listOfIncomes" class="table__list"></ol>
+        <div class=" table__footer">
+          Sum of incomes: <span id="sumOfIncomsElement" class="table__footer-sum"></span>
+        </div>
+      </div>
+      <div class="table">
+        <h3 class="table__heading">Expenses</h3>
+        <form class="table__form">
+          <input name="name" type="text" class="table__form-input table__form-input--name" placeholder="Expenses" />
+          <input id="amountExpenses" name="amount" type="number" min="0" class="table__form-input table__form-input--amount" placeholder="Amount" />
+          <input type="submit" class="table__form-input table__form-input--submit" value="Add" />
+        </form>
+        <ol id="listOfExpenses" class="table__list"></ol>
+        <div class="table__footer">
+          Sum of expenses: <span id="sumOfExpensesElement" class="table__footer-sum"></span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="./scripts/index.js" type="module"></script>
+
+</body>
+
+</html>
