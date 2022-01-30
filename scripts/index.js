@@ -4,10 +4,10 @@ import { addListItem } from "./addListItem.js";
 
 window.addEventListener("DOMContentLoaded", () => {
 
-  const formOfIncomes = document.querySelectorAll(".table__form")[0];
+  const formOfIncome = document.querySelectorAll(".table__form")[0];
   const formOfExpenses = document.querySelectorAll(".table__form")[1];
 
-  formOfIncomes.addEventListener("submit", (e) => addListItem(e, "incomes"));
+  formOfIncome.addEventListener("submit", (e) => addListItem(e, "Income"));
   formOfExpenses.addEventListener("submit", (e) => addListItem(e, "expenses"));
   
 });
