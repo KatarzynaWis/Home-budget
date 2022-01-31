@@ -99,7 +99,8 @@ const addListItem = (event, IncomeOrExpenses) => {
     inputEditAmount.setAttribute("min", "0");
     inputEditAmount.setAttribute("step", "0.01");
     inputEditAmount.setAttribute("required", "");
-    inputEditAmount.value = spanAmount.textContent;
+    inputEditAmount.setAttribute("value", spanAmount.textContent);
+    // inputEditAmount.value = spanAmount.textContent;
     inputEditAmount.addEventListener("keypress", editInputAmount);
 
     if (IncomeOrExpenses === "Income") {

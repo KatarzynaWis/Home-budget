@@ -82,6 +82,7 @@ body {
     3px 3px 5px rgb(22, 18, 63, 0.1);
   background-color: transparent;
   cursor: pointer;
+  transition: 0.5s;
 }
 ::placeholder {
   color: #16123f;
