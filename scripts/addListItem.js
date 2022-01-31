@@ -212,17 +212,14 @@ const addListItem = (event, IncomeOrExpenses) => {
     const totalIncome = document.querySelector("#totalIncome");
     const totalExpenses = document.querySelector("#totalExpenses");
     const summaryElement = document.querySelector("#summaryElement");
+    let result = totalIncome.textContent - totalExpenses.textContent;
 
-    if (totalIncome.textContent - totalExpenses.textContent > 0) {
+    if (result > 0) {
       summaryElement.style.color = "#259625";
-      summaryElement.textContent = `Your balance is +${
-        totalIncome.textContent - totalExpenses.textContent
-      } PLN`;
-    } else if (totalIncome.textContent - totalExpenses.textContent < 0) {
+      summaryElement.textContent = `Your balance is +${result.toFixed(2)} PLN`;
+    } else if (result < 0) {
       summaryElement.style.color = "#ff6961";
-      summaryElement.textContent = `Your balance is ${
-        totalIncome.textContent - totalExpenses.textContent
-      } PLN`;
+      summaryElement.textContent = `Your balance is ${result.toFixed(2)} PLN`;
     } else {
       summaryElement.style.color = "#06a2de";
       summaryElement.textContent = "Your balance is 0 PLN";
